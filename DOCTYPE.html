@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Натальная карта</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Натальная карта</h1>
+    <input type="text" id="birthDate" placeholder="Дата рождения (дд.мм.гггг)">
+    <input type="text" id="birthTime" placeholder="Время рождения (чч:мм)">
+    <input type="text" id="birthPlace" placeholder="Место рождения">
+    <button onclick="calculate()">Рассчитать</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            const birthDate = document.getElementById('birthDate').value;
+            const birthTime = document.getElementById('birthTime').value;
+            const birthPlace = document.getElementById('birthPlace').value;
+
+            // Здесь можно отправить данные на сервер для расчета
+            const result = `Дата: ${birthDate}, Время: ${birthTime}, Место: ${birthPlace}`;
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
